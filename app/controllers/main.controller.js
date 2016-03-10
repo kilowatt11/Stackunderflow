@@ -3,14 +3,17 @@
     angular.module('app').controller('MainController', MainController);
 
     function MainController($scope, MainService) {
-        $scope.name = "";
+        $scope.name = "foo";
         $scope.greetings = [];
         $scope.greet = function () {
             var msg = MainService.greet($scope.name)
             $scope.greetings.push(msg)
         };
+        $scope.scoreTotal = [];
+      
+        
 
-        var question = {
+        $scope.question = {
             text: "What is an IIFE in JavaScript?",
             author: "Matt Overall",
             date: new Date(),
@@ -67,35 +70,52 @@
                 }]
         };
         
-//         Assign the following variables.
-//         var questionText = question.text;
-//         var questionAnswerCount = question.answers.length;
-//         var question2ndAnswerScore = question.answers[1].score;
-//         var question2ndAnswer1stCommentFlagged = question.answers[1].comments[0].flagged;
+       // $scope.question = question;  
         
-//         var hasAnAcceptedAnswer;
-//         question.answers[i].accepted
+      
         
-        
-//         for (var i = 0; i  < question.answers.length; i++) {
-//             if (question.answers[i].accepted === true) {
-              
-//           }
-//         }
-                                 
-         //var totalScoreofAllAnswers = question.answers.score[0]+[1]+[3]
-        // console.log(totalScoreofAllAnswers)
-//         var returnAllFlaggedComments =
-//         var countTotalNumberofComments =
-        
-// ​       *homework:*​
-//         add up total score of all `answers`
-//         return all the `flagged` `comments`
-//         count total number of `comments`
-//         check to see if `question` has `tag` `javascript` 
-//         bonus: create a function that accepts a `tag` and checks to see if `question` has that `tag`
+        // $scope.addScore = function (score) {
+        //     for (var i = 0; i < question.answers.length; i++) {
+        //         if (question.answers[i].score == score) {
+        //             $scope.scoreTotal.push(question.answers[i].score)
+        //         }
 
-
+        //     }
+        //     console.log($scope.scoreTotal);
+        // };
+        // $scope.addScore();
         
+        // $scope.flagged = function(){
+        //     for(var i = 0; i < question.answers.length; i++){
+        //         for(var j = 0; j < question.answers[i].comments.length; j++){
+        //       if(question.answers[i].comments[j].flagged === true ){
+        //             console.log(question.answers[i].comments[j].text)           }                       
+        //        }
+        //     }
+        // };
+        // $scope.flagged();
+  
+        
+        //         Assign the following variables.
+        //         var questionText = question.text;
+        //         var questionAnswerCount = question.answers.length;
+        //         var question2ndAnswerScore = question.answers[1].score;
+        //         var question2ndAnswer1stCommentFlagged = question.answers[1].comments[0].flagged;
+        
+        //         var hasAnAcceptedAnswer;
+        //         question.answers[i].accepted
+        
+        
+       
+        
+        // ​       *homework:*​
+        //         add up total score of all `answers`
+        //         return all the `flagged` `comments`
+        //         count total number of `comments`
+        //         check to see if `question` has `tag` `javascript` 
+        //         bonus: create a function that accepts a `tag` and checks to see if `question` has that `tag`
+
     }
+    
+   
 })();

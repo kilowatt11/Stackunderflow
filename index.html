@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Pizza Pie</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -20,6 +21,25 @@
             <li ng-repeat="greeting in greetings track by $index">Greeting #{{$index+1}}: {{greeting}}</li>
         </ul>
     </div>
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">{{question.text}}</div>
+        <div class="panel-body" ng-repeat="answer in question.answers">
+            <p>{{answer.text}}
+
+           <!-- <p ng-include="'Partials/View1.html'"></p>-->
+
+
+            
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="comment in answer.comments">{{comment.text}}: {{comment.author}}</li>
+
+            </ul>
+        </div>
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
     <script src="app/app.js"></script>
