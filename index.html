@@ -34,7 +34,8 @@
 
 
                 <ul class="list-group">
-                    <li class="list-group-item" ng-repeat="comment in answer.comments">{{comment.text}}: {{comment.author}}</li>
+                    <li ng-include="'Partials/View2.html'"></li>
+                    <answer-comment></answer-comment>
 
                 </ul>
         </div>
